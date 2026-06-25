@@ -1,11 +1,11 @@
-# Simple Calculator Program
+# Simple Calculator Program for Basic Arithmetic Operations
 
-# User se inputs lena
+# Taking inputs from the user
 val1 = int(input("Enter your first value: "))
 val2 = int(input("Enter your second value: "))
 operator = input("Enter operator (+, -, *, /): ")
 
-# Operations check karna
+# Checking operations based on user input
 if operator == "+":
     print("Your answer is:", val1 + val2)
 elif operator == "-":
@@ -13,7 +13,7 @@ elif operator == "-":
 elif operator == "*":
     print("Your answer is:", val1 * val2)
 elif operator == "/":
-    # Zero division error se bachne ke liye chota sa check
+    # Prevent application crash by checking for division by zero
     if val2 != 0:
         print("Your answer is:", val1 / val2)
     else:
