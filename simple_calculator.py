@@ -1,22 +1,36 @@
-# Simple Calculator Program for Basic Arithmetic Operations
+# Custom functions for arithmetic operations
+def d(a, b):
+    sum = a + b
+    return sum
 
-# Taking inputs from the user
-val1 = int(input("Enter your first value: "))
-val2 = int(input("Enter your second value: "))
-operator = input("Enter operator (+, -, *, /): ")
+def s(a, b):
+    subtraction = a - b
+    return subtraction
 
-# Checking operations based on user input
-if operator == "+":
-    print("Your answer is:", val1 + val2)
-elif operator == "-":
-    print("Your answer is:", val1 - val2)
-elif operator == "*":
-    print("Your answer is:", val1 * val2)
-elif operator == "/":
-    # Prevent application crash by checking for division by zero
-    if val2 != 0:
-        print("Your answer is:", val1 / val2)
-    else:
-        print("Error: Cannot divide by zero!")
+def m(a, b):
+    multiplication = a * b
+    return multiplication
+
+def di(a, b):
+    division = a / b
+    return division
+
+# Prompting user to select an arithmetic operator
+print("Choose Your Operation : + , - , * , /")
+choose = input("What do you Want to do with Numbers ? = ")
+
+# Capturing operands from the user
+x = int(input("Enter First Number : "))
+y = int(input("Enter Second Number : "))
+
+# Conditional execution based on selected operation
+if choose == "+":
+    print("Sum is : ", d(x, y))
+elif choose == "-":
+    print("Subtraction is : ", s(x, y))
+elif choose == "*":
+    print("Multiplication is : ", m(x, y))
+elif choose == "/":
+    print("Division is : ", di(x, y))
 else:
-    print("Invalid Operator!")
+    print("Plz use the correct operation !")
